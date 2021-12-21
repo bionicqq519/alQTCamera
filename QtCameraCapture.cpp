@@ -74,7 +74,7 @@ void QtCameraCapture::Cvt_yuv_to_rgb(unsigned char *yuv, unsigned char* rgb,  in
 
     float rt0 = 0, gt0 = 0, bt0 = 0, rt1 = 0, gt1 = 0, bt1 = 0;
 
-    for(int i = 0; i <= (image_width * image_height) / 2 ;i++)
+    for(int i = 0; i < (image_width * image_height) / 2 ;i++)
     {
         bt0 = 1.164 * (*y0 - 16) + 2.018 * (*u0 - 128);
         gt0 = 1.164 * (*y0 - 16) - 0.813 * (*v0 - 128) - 0.394 * (*u0 - 128);

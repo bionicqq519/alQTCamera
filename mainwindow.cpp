@@ -6,6 +6,8 @@
 
 #include <QTime>
 
+#include "DllCall.h"
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -38,6 +40,9 @@ MainWindow::MainWindow(QWidget *parent)
 //    viewfind->show();
 //    camera->setViewfinder(viewfind);
 //    camera->start();
+
+    dllCall();
+    qDebug()<<"MainWindow";
 }
 
 MainWindow::~MainWindow()
